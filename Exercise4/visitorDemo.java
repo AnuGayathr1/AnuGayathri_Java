@@ -1,17 +1,17 @@
 package Exercise4;
 import java.util.*;
-public class visitorDemo {
+public class VisitorDemo {
 	public static void main(String[] args) throws DogExceptions {
 		Scanner sc=new Scanner(System.in);
 		Child c=new Child();
 		Dog d=new Dog();
 		System.out.println("Enter an item: ");
 		String s=sc.next();
-		c.playWithDog(s, d);
+		c.PlayWithDog(s, d);
 	}
 }
 class Child{
-	public void playWithDog(String item, Dog dog) {
+	public void PlayWithDog(String item, Dog dog) {
 		System.out.println("Before exception...");
 		try {
 			dog.play(item);
@@ -23,7 +23,7 @@ class Child{
 	}
 }
 class Dog{
-	public void play(String item) throws DogExceptions{
+	public void Play(String item) throws DogExceptions{
 		if(item.equals("stick")) {
 			throw new DogBarkExceptions("You beat I bite...");
 		}

@@ -1,9 +1,9 @@
 package Exercise4;
-public class SingletonDemo2 {
+public class SingletonDemo {
 	public static void main(String[] args) {
-		Database db = Database.createSingleTon();
+		Database db = Database.getInstance();
 		db.ID = "101";
-		Database db1 = Database.createSingleTon();
+		Database db1 = Database.getInstance();
 		db1.ID = "201";
 		System.out.println(db.ID + " " + db1.ID);
 	}
@@ -16,7 +16,7 @@ class Database {
 		System.out.println("Database object is created...");
 	}
 
-	synchronized public static Database createSingleTon() {
+	synchronized public static Database getInstance() {
 		if (instance != null) {
 			return instance;
 		} else {

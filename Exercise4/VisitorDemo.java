@@ -7,11 +7,11 @@ public class VisitorDemo {
 		Dog d=new Dog();
 		System.out.println("Enter an item: ");
 		String s=sc.next();
-		c.PlayWithDog(s, d);
+		c.playWithDog(s, d);
 	}
 }
 class Child{
-	public void PlayWithDog(String item, Dog dog) {
+	public void playWithDog(String item, Dog dog) {
 		System.out.println("Before exception...");
 		try {
 			dog.play(item);
@@ -23,7 +23,7 @@ class Child{
 	}
 }
 class Dog{
-	public void Play(String item) throws DogExceptions{
+	public void play(String item) throws DogExceptions{
 		if(item.equals("stick")) {
 			throw new DogBarkExceptions("You beat I bite...");
 		}
@@ -62,7 +62,7 @@ abstract class DogExceptions extends Exception{
 }
 class DogBarkExceptions extends DogExceptions{
 	String msg;
-	public DogBarkExceptions(String msg) {
+	public dogBarkExceptions(String msg) {
 		// TODO Auto-generated constructor stub
 		this.msg=msg;
 	}
@@ -81,7 +81,7 @@ class DogBarkExceptions extends DogExceptions{
 }
 class DogBiteExceptions extends DogExceptions{
 	String msg;
-	public DogBiteExceptions(String msg) {
+	public dogBiteExceptions(String msg) {
 		// TODO Auto-generated constructor stub
 		this.msg=msg;
 	}
@@ -100,7 +100,7 @@ class DogBiteExceptions extends DogExceptions{
 }
 class DogHappyExceptions extends DogExceptions{
 	String msg;
-	public DogHappyExceptions(String msg) {
+	public dogHappyExceptions(String msg) {
 		// TODO Auto-generated constructor stub
 		this.msg=msg;
 	}

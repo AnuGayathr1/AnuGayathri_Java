@@ -8,22 +8,21 @@ import java.util.Scanner;
 
 public class FileCopyChar {
 	public static void main(String[] args) throws IOException {
-		String source,destination,line,content="";
-		Scanner sc=new Scanner(System.in);
+		String source, destination, line, content = "";
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the source file name: ");
-		source=sc.nextLine();
-		FileReader filereader=new FileReader(source);
-		BufferedReader bufferedreader=new BufferedReader(filereader);
-		for(line=bufferedreader.readLine(); line!=null; line=bufferedreader.readLine())
-		{
-				content=content+line+"\n";
+		source = scanner.nextLine();
+		FileReader fileReader = new FileReader(source);
+		BufferedReader bufferedReader = new BufferedReader(fileReader);
+		for (line = bufferedReader.readLine(); line != null; line = bufferedReader.readLine()) {
+			content = content + line + "\n";
 		}
-		bufferedreader.close();
+		bufferedReader.close();
 		System.out.println("Enter the destination file name: ");
-		destination=sc.nextLine();
-		FileWriter filewriter=new FileWriter(destination);
-		filewriter.write(content);
-		filewriter.close();
+		destination = scanner.nextLine();
+		FileWriter fileWriter = new FileWriter(destination);
+		fileWriter.write(content);
+		fileWriter.close();
 		System.out.println("File copied successfully...");
 	}
 }

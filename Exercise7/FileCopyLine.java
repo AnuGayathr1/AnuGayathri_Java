@@ -10,9 +10,9 @@ public class FileCopyLine {
 			inputStream = new BufferedReader(new FileReader("/Users/anugayathri/eclipse-workspace/Exercise7/file"));
 			outputStream = new PrintWriter(new FileWriter("/Users/anugayathri/eclipse-workspace/Exercise7/copy"));
 
-			String l;
-			while ((l = inputStream.readLine()) != null) {
-				outputStream.println(l);
+			String line;
+			while ((line = inputStream.readLine()) != null) {
+				outputStream.println(line);
 			}
 		} finally {
 			if (inputStream != null) {
@@ -25,3 +25,4 @@ public class FileCopyLine {
 		}
 	}
 }
+

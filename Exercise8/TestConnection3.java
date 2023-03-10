@@ -3,7 +3,7 @@ import java.sql.*;
 class MakeConnection3{
 	Connection connection;
 	Statement statement;
-	ResultSet resultset;
+	ResultSet resultSet;
 	MakeConnection3() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -12,9 +12,9 @@ class MakeConnection3{
 			int insert1=statement.executeUpdate("insert into John values(001,'Tom',23)");
 			int insert2=statement.executeUpdate("insert into John values(002,'Lucy',24)");
 			int insert3=statement.executeUpdate("insert into John values(003,'Sebastian',25)");
-			resultset=statement.executeQuery("select * from John");
-			while(resultset.next()) {
-				System.out.println(resultset.getInt(1)+" "+resultset.getString(2)+" "+resultset.getInt(3));
+			resultSet=statement.executeQuery("select * from John");
+			while(resultSet.next()) {
+				System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2)+" "+resultSet.getInt(3));
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

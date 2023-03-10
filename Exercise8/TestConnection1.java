@@ -3,7 +3,7 @@ import java.sql.*;
 class MakeConnection1{
 	Connection connection;
 	Statement statement;
-	ResultSet resultset;
+	ResultSet resultSet;
 	MakeConnection1() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -11,7 +11,7 @@ class MakeConnection1{
 			statement=connection.createStatement();
 			int create=statement.executeUpdate("create table John(empno int, empname varchar(20), deptno int)");
 			System.out.println("Table created successfully...");
-		}catch(Exception e) {
+		} catch(Exception e) {
 			System.out.println("Table already exists...");
 		}
 	}

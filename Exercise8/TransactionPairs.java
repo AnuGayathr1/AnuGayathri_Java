@@ -4,7 +4,6 @@ import java.sql.*;
 
 public class TransactionPairs {
 	public static void main(String[] args) {
-		//String url = "jdbc:mySubprotocol:myDataSource";
 		Connection con = null;
 		Statement stmt;
 		PreparedStatement updateSales;

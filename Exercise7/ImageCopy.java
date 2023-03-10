@@ -17,11 +17,11 @@ public class ImageCopy {
 		
 	// Write the image into the object of ByteArrayOutputStream class
 	ImageIO.write(image, "jpg", outStreamObj);
-	byte [] byteArray = outStreamObj.toByteArray();
-	ByteArrayInputStream inStreambj = new ByteArrayInputStream(byteArray);
+	byte[] byteArray = outStreamObj.toByteArray();
+	ByteArrayInputStream inStreamObj = new ByteArrayInputStream(byteArray);
 		
 	// Read image from byte array
-	BufferedImage newImage = ImageIO.read(inStreambj);
+	BufferedImage newImage = ImageIO.read(inStreamObj);
 		
 	// Write output image
 	ImageIO.write(newImage, "jpg", new File("java-logo-vert-blk.png"));

@@ -11,3 +11,4 @@ public class FileSize {
 		System.out.println("File: " + path + "Size: " + size + " bytes");
 	}
 }
+

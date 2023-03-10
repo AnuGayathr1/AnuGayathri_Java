@@ -2,21 +2,6 @@ package flyweightPatternDemo;
 import java.util.*;
 import java.util.HashMap;
 
-public class FlyWeightPattern {
-	private static final String colors[]= {"Red","Green","Blue","Yellow"};
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		for(int i=0;i<10;i++) {
-	         Circle circle = (Circle)ShapeFactory.getCircle(getRandomColor());
-	         System.out.println("Enter the radius of the circle: ");
-	         circle.setRadius(10);
-	         circle.create();
-	         }
-	}
-	private static String getRandomColor() {
-		return colors[(int)(Math.random()*colors.length)];
-	}
-}
 interface Shape {
 	void create();
 }
@@ -45,5 +30,20 @@ class ShapeFactory{
 			System.out.println("Created circle of color "+color);
 		}
 		return circle;
+	}
+}
+public class FlyWeightPattern {
+	private static final String colors[]= {"Red","Green","Blue","Yellow"};
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<10;i++) {
+	         Circle circle = (Circle)ShapeFactory.getCircle(getRandomColor());
+	         System.out.println("Enter the radius of the circle: ");
+	         circle.setRadius(10);
+	         circle.create();
+	         }
+	}
+	private static String getRandomColor() {
+		return colors[(int)(Math.random()*colors.length)];
 	}
 }
